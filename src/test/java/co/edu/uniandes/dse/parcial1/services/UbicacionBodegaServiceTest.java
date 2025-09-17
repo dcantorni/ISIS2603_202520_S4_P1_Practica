@@ -3,8 +3,6 @@ package co.edu.uniandes.dse.parcial1.services;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +13,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.context.annotation.Import;
 
-import co.edu.uniandes.dse.parcial1.entities.MercanciaEntity;
 import co.edu.uniandes.dse.parcial1.entities.UbicacionBodegaEntity;
 import jakarta.transaction.Transactional;
 import uk.co.jemos.podam.api.PodamFactory;

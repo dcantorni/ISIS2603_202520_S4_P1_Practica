@@ -14,14 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class MercanciaService {
     
-      @Autowired
+    @Autowired
     private MercanciaRepository mercanciaRepository;
 
     @Transactional
     public MercanciaEntity createMercancia(MercanciaEntity mercancia){
         LocalDateTime fechaActual = LocalDateTime.now();
     
-    if (mercanciaRepository.findbycodigoBarras(mercancia.getCodigoBarras()) != null) {
+    if (mercanciaRepository.findbyCodigoBarras(mercancia.getCodigoBarras()) != null) {
             throw new IllegalArgumentException("No se puede registrar una mercancía sin código de barras único");
         }
 
@@ -32,7 +32,6 @@ public class MercanciaService {
         throw new IllegalArgumentException("El nombre de la mercancía es obligatorio y no puede estar vacío.");
     }
     
-
         return mercanciaRepository.save(mercancia); 
     }
 }

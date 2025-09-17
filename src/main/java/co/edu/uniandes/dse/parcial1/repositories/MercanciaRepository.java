@@ -6,7 +6,9 @@ import co.edu.uniandes.dse.parcial1.entities.MercanciaEntity;
 
 public interface MercanciaRepository extends JpaRepository<MercanciaEntity, Long> {
 
-    Object findbycodigoBarras(Long codigoBarras);
+    MercanciaEntity findbyCodigoBarras(Long codigoBarras);
+
+    
 
 
 }
