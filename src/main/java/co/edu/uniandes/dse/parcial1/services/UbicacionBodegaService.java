@@ -17,7 +17,7 @@ public class UbicacionBodegaService {
     private UbicacionBodegaRepository ubicacionBodegaRepository;
 
     @Transactional
-    public UbicacionBodegaEntity createEstadio(UbicacionBodegaEntity ubicacionBodega){
+    public UbicacionBodegaEntity createUbicacionBodega(UbicacionBodegaEntity ubicacionBodega){
         
 
     if (ubicacionBodega.getNumeroEstante() <= 0){

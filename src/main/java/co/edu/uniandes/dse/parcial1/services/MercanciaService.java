@@ -25,7 +25,7 @@ public class MercanciaService {
             throw new IllegalArgumentException("No se puede registrar una mercancía sin código de barras único");
         }
 
-    if (mercancia.getFechaRecepcion().isBefore(fechaActual)){
+    if (mercancia.getFechaRecepcion().isAfter(fechaActual)){
         throw new IllegalArgumentException("La fecha de recepción no puede ser posterior a la fecha actual.");
     }
     if (mercancia.getNombre() == null || mercancia.getNombre().isBlank()){
